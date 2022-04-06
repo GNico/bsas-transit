@@ -15,7 +15,7 @@ import com.gnico.transit.utils.DistanceConverter;
 
 @RestController
 @CrossOrigin
-public class ItineraryController {
+class ItineraryController {
 	
 	@Autowired
 	private FindItinerary itineraryFinderUsercase;

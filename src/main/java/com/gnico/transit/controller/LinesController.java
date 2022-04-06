@@ -11,7 +11,7 @@ import com.gnico.transit.usecases.GetAllLinesResponse;
 
 @RestController
 @CrossOrigin
-public class LinesController {
+class LinesController {
 
 	@Autowired
 	private GetAllLines getLinesUsecase;
@@ -19,8 +19,8 @@ public class LinesController {
 	
 	@GetMapping("/lines")
 	public GetAllLinesResponse getLines(
-			@RequestParam(name = "lat", required = false, defaultValue = "null") Double lat,
-			@RequestParam(name = "lon", required = false, defaultValue = "null") Double lon) {
+			@RequestParam(name = "lat", required = false) Double lat,
+			@RequestParam(name = "lon", required = false) Double lon) {
 		
 		return (lat != null && lon != null) 
 				? getLinesUsecase.getLinesCloseTo(lat, lon) 

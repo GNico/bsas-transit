@@ -11,7 +11,7 @@ import com.gnico.transit.domain.RouteFinder;
 import com.gnico.transit.domain.SubwayRoute;
 
 @Service
-public class AllMeansRouteFinder implements RouteFinder {
+class AllMeansRouteFinder implements RouteFinder {
 
 	private BusDataGateway busDataGateway;
 	private SubwayDataGateway subwayDataGateway;

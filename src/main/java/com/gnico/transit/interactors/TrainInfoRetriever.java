@@ -10,7 +10,7 @@ import com.gnico.transit.usecases.GetTrainRoutes;
 import com.gnico.transit.usecases.GetTrainRoutesResponse;
 
 @Component
-public class TrainInfoRetriever implements GetTrainRoutes {
+class TrainInfoRetriever implements GetTrainRoutes {
 
 	private TrainDataGateway trainDataGateway;
 

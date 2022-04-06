@@ -14,7 +14,7 @@ import com.gnico.transit.usecases.GetRoutesRequest;
 
 @RestController
 @CrossOrigin
-public class BusController {
+class BusController {
 	
 	@Autowired
 	private GetBusRoutes getBusRoutesUsecase;

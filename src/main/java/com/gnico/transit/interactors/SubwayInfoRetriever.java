@@ -8,7 +8,7 @@ import com.gnico.transit.usecases.GetSubwayRoute;
 import com.gnico.transit.usecases.GetSubwayRouteResponse;
 
 @Component
-public class SubwayInfoRetriever implements GetSubwayRoute  {
+class SubwayInfoRetriever implements GetSubwayRoute  {
 
 	private SubwayDataGateway subwayDataGateway;
 	

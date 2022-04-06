@@ -14,7 +14,7 @@ import com.gnico.transit.usecases.FindItineraryRequest;
 import com.gnico.transit.usecases.FindItineraryResponse;
 
 @Service
-public class ItineraryFinder implements FindItinerary {
+class ItineraryFinder implements FindItinerary {
 
 	private final ItineraryStrategy itineraryStrategy;
 	

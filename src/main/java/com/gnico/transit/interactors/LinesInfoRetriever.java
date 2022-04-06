@@ -6,7 +6,7 @@ import com.gnico.transit.usecases.GetAllLines;
 import com.gnico.transit.usecases.GetAllLinesResponse;
 
 @Component
-public class LinesInfoRetriever implements GetAllLines {
+class LinesInfoRetriever implements GetAllLines {
 
 	private BusDataGateway busDataGateway;
 	private SubwayDataGateway subwayDataGateway;

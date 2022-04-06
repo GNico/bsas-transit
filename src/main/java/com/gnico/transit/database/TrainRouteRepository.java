@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 
 import com.gnico.transit.database.entity.TrainRouteTableRow;
 
-public interface TrainRouteRepository extends JpaRepository<TrainRouteTableRow, Integer> {
+interface TrainRouteRepository extends JpaRepository<TrainRouteTableRow, Integer> {
 
 	@Query(value="select linea from (select distinct linea from train_routes) "
 			+ "tr order by length(tr.linea), tr.linea", nativeQuery = true)

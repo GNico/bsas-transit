@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.gnico.transit.database.entity.TrainStopTableRow;
 
-public interface TrainStopRepository extends JpaRepository<TrainStopTableRow, Integer> {
+interface TrainStopRepository extends JpaRepository<TrainStopTableRow, Integer> {
 
 	List<TrainStopTableRow> findAllByLine(String line);
 

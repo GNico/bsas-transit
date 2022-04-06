@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.gnico.transit.database.entity.SubwayRouteTableRow;
 
 @Repository
-public interface SubwayRouteRepository extends JpaRepository<SubwayRouteTableRow, Integer>  {
+interface SubwayRouteRepository extends JpaRepository<SubwayRouteTableRow, Integer>  {
 	
 	@Query(value="select linea from (select distinct linea from subway_routes) "
 			+ "sr order by length(sr.linea), sr.linea", nativeQuery = true)

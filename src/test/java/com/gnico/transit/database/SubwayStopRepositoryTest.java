@@ -1,4 +1,4 @@
-package com.gnico.transit.repository;
+package com.gnico.transit.database;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

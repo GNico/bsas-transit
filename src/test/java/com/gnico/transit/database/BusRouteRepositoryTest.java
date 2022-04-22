@@ -10,14 +10,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.jdbc.Sql;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
-import com.gnico.transit.database.BusRouteRepository;
 import com.gnico.transit.database.entity.BusRouteTableRow;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+@Testcontainers
 @Sql("/insertBusRoutes.sql")
-class BusRouteRepositoryTest {
+class BusRouteRepositoryTest extends PostgisContainerBaseTest {
 	
 	/* test data set contains the following routes:
 	 * line 93 - A 
@@ -27,10 +28,10 @@ class BusRouteRepositoryTest {
 	 * line 161 - B
 	 * (10 total routes adding the opposite direction routes)
 	 */
-
+	
 	@Autowired
 	BusRouteRepository repository;
-		
+
 	@Test
 	void test_getAllBusLinestest() {
 		List<String> expectedLines = List.of("41", "93", "161");
@@ -51,7 +52,4 @@ class BusRouteRepositoryTest {
 		}
 	} 
 	
-	
-	
-
 }

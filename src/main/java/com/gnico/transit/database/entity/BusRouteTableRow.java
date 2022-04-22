@@ -28,7 +28,7 @@ public class BusRouteTableRow {
 	@Column(name = "route_short_name")
 	private String shortName;
 	
-	@Column(name = "long_short_name")
+	@Column(name = "route_long_name")
 	private String longName;
 	
 	@Column(name = "route_desc")

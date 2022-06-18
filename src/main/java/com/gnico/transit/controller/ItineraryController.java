@@ -13,6 +13,10 @@ import com.gnico.transit.usecases.FindItineraryRequest;
 import com.gnico.transit.usecases.FindItineraryResponse;
 import com.gnico.transit.utils.DistanceConverter;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
+
 @RestController
 @CrossOrigin
 class ItineraryController {
@@ -24,6 +28,8 @@ class ItineraryController {
 	private ItineraryPresenter itineraryPresenter;
 	
 	@GetMapping("/itinerary")
+	@Operation(tags="4. Itinerary", summary = "Get the most convenient route between two locations")
+	@Parameter(in = ParameterIn.QUERY, name="distance", description="Maximum distance from location to routes in meters")
 	public FindItineraryViewModel findItineraries(
 			@RequestParam("startLat") double startLat,
 			@RequestParam("startLon") double startLon,
